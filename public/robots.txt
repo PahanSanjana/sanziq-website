@@ -1,0 +1,6 @@
+# SanziQ Website Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sanziq.com/sitemap.xml 

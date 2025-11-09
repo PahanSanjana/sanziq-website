@@ -1,0 +1,44 @@
+{
+  "name": "SANZIQ — Smart Web Solutions",
+  "short_name": "SANZIQ",
+  "description": "Modern web development with a creative edge",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [{ "src": "/shortcut-contact.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Our Portfolio",
+      "short_name": "Portfolio",
+      "description": "See our latest projects",
+      "url": "/portfolio",
+      "icons": [{ "src": "/shortcut-portfolio.png", "sizes": "96x96" }]
+    }
+  ]
+} 

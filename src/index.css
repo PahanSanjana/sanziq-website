@@ -1,0 +1,167 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Skip to content link for accessibility */
+  .skip-to-content {
+    @apply sr-only focus:not-sr-only fixed left-0 top-0 z-50 p-3 bg-primary-600 text-white;
+  }
+  
+  /* Improve focus styles for better accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500 dark:outline-primary-400;
+  }
+  
+  /* Better scrollbars */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-light-400 dark:bg-dark-600;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-300 dark:bg-primary-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-400 dark:bg-primary-600;
+  }
+  
+  /* Selection color */
+  ::selection {
+    @apply bg-primary-200 dark:bg-primary-800 text-primary-900 dark:text-primary-100;
+  }
+  
+  /* Improve text rendering on mobile */
+  @media (max-width: 640px) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:opacity-50 disabled:pointer-events-none touch-manipulation shadow-md;
+  }
+  
+  .btn-primary {
+    @apply btn text-white bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 border border-white/20 backdrop-blur-sm;
+  }
+  
+  .btn-secondary {
+    @apply btn text-white bg-indigo-600 hover:bg-indigo-500 border border-white/10 backdrop-blur-sm;
+  }
+  
+  .btn-outline {
+    @apply btn border border-white/20 text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-sm;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-soft transition-all;
+  }
+  
+  .card:hover {
+    @apply shadow-soft-xl;
+  }
+  
+  /* Input styles */
+  .form-input {
+    @apply block w-full rounded-md border-light-500 bg-white dark:bg-dark-700 dark:border-dark-500 dark:text-light-200 focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-400 dark:focus:ring-primary-400 shadow-sm;
+  }
+  
+  /* Section styles */
+  .section {
+    @apply py-12 sm:py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-dark-800 dark:text-light-100 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-base sm:text-lg text-dark-500 dark:text-light-400 max-w-3xl mx-auto mb-8 sm:mb-12;
+  }
+  
+  /* Container styles */
+  .container-responsive {
+    @apply px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto;
+  }
+  
+  /* Responsive spacing utility */
+  .stack-vertical > * + * {
+    @apply mt-4 sm:mt-6;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .btn {
+      @apply py-3;
+    }
+    
+    input, select, textarea, button {
+      @apply text-base;
+    }
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-on-scroll {
+    @apply opacity-0 transition-opacity duration-700 ease-in-out;
+  }
+  
+  .animate-on-scroll.animate-active {
+    @apply opacity-100;
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+  
+  /* Safe area insets for notched devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Touch targets should be at least 44x44px */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Add xs breakpoint for smaller screens */
+  @media (min-width: 475px) {
+    .xs\:block {
+      display: block;
+    }
+    
+    .xs\:flex-row {
+      flex-direction: row;
+    }
+    
+    .xs\:w-auto {
+      width: auto;
+    }
+    
+    .xs\:mt-0 {
+      margin-top: 0;
+    }
+  }
+}
