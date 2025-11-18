@@ -150,7 +150,7 @@ const Contact = () => {
                         name="name"
                         type="text"
                         className={`form-input w-full ${errors.name ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}`}
-                        placeholder="John Doe"
+                        placeholder="Enter your full name"
                         aria-required="true"
                         aria-invalid={errors.name ? "true" : "false"}
                         {...register("name", {
@@ -181,7 +181,7 @@ const Contact = () => {
                         name="email"
                         type="email"
                         className={`form-input w-full ${errors.email ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}`}
-                        placeholder="john.doe@example.com"
+                        placeholder="Enter your email address"
                         aria-required="true"
                         aria-invalid={errors.email ? "true" : "false"}
                         {...register("email", {
@@ -214,7 +214,7 @@ const Contact = () => {
                         name="phone"
                         type="tel"
                         className={`form-input w-full ${errors.phone ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}`}
-                        placeholder="+1 (123) 456-7890"
+                        placeholder="Enter your phone number"
                         {...register("phone", {
                           pattern: {
                             value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
