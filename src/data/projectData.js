@@ -1,6 +1,8 @@
 import NINDT from "../assets/Projects/Nindt.png"; // add other images as needed
 import DISAL from "../assets/Projects/Disal Gems.png"
-import PortfolioL from "../assets/Projects/Me-working-on-a-laptop1.png"
+import PortfolioL from "../assets/Projects/Poerfolio.png"
+import vinoura from "../assets/Projects/Vinoura.png"
+
 
 const projectData = [
   {
@@ -23,6 +25,14 @@ const projectData = [
     image: PortfolioL,
     link: "https://pahan-sanjana.netlify.app/",
   },
+
+  {
+    title: "Vinoura",
+    description: "A responsive, luxury-fashion site for VINOURA, showcasing couture collections and interactive storytelling.",
+    image: vinoura,
+    link: "https://vinoura.netlify.app/",
+  },
+
  
 ];
 
